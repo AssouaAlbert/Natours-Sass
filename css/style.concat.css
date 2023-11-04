@@ -26,20 +26,20 @@ Dark green: #28b485
 
 :root {
   font-size: 62.5%; }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     :root {
       font-size: 75%; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     :root {
       font-size: 56.25%; } }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     :root {
       font-size: 50%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     body {
       padding: 0rem; } }
 
@@ -85,11 +85,11 @@ body {
     letter-spacing: 3.5rem;
     animation-name: moveinLeft;
     animation-duration: 2s; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         font-size: 4rem;
         letter-spacing: 3rem; } }
-    @media (max-width: 25em) {
+    @media only screen and (max-width: 25em) {
       .heading-primary--main {
         font-size: 3rem;
         letter-spacing: 2rem; } }
@@ -99,7 +99,7 @@ body {
     font-weight: 40rem;
     letter-spacing: 1rem;
     animation: moveinRight 2s ease-out; }
-    @media (max-width: 25em) {
+    @media only screen and (max-width: 25em) {
       .heading-primary--sub {
         font-size: 1rem;
         letter-spacing: 0.5rem; } }
@@ -114,7 +114,7 @@ body {
   transition: all 0.2s;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   color: transparent; }
-  @media (max-width: 25em) {
+  @media only screen and (max-width: 25em) {
     .heading-secondary {
       font-size: 2rem;
       letter-spacing: 1px; } }
@@ -151,7 +151,7 @@ body {
 
 .u-margin-set {
   margin-top: 1rem; }
-  @media (max-width: 25em) {
+  @media only screen and (max-width: 25em) {
     .u-margin-set {
       margin-top: 3rem; } }
 
@@ -159,10 +159,10 @@ body {
   background-color: rgba(228, 228, 228, 0.2);
   margin-top: -19vh;
   padding: 15rem 0 20rem 0; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .section-about {
       margin-top: -10vh; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-about {
       margin-top: -9vh; } }
 
@@ -197,7 +197,7 @@ body {
   box-shadow: 0 0.5rem 0.3rem #595959;
   border-radius: 4px;
   height: 50rem; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .book {
       background-image: linear-gradient(90deg, #eaeaea 0%, #eaeaea 0%);
       background-size: cover;
@@ -205,7 +205,7 @@ body {
   .book__form {
     width: 50%;
     padding: 5rem; }
-    @media (max-width: 56.27em) {
+    @media only screen and (max-width: 56.27em) {
       .book__form {
         width: 100%; } }
 
@@ -217,7 +217,7 @@ body {
   transition: all 0.2s ease-in-out;
   border-radius: 3rem;
   position: relative; }
-  @media (max-width: 25em) {
+  @media only screen and (max-width: 25em) {
     .btn:link, .btn:visited {
       padding: 1rem 2rem; } }
 
@@ -282,6 +282,29 @@ body {
   border: 1px solid rgba(228, 228, 228, 0.2);
   color: #fff;
   transform: translateY(-3px); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/img/hero.jpg");
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media only screen and (max-width: 75em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%); } }
+  .header__logo {
+    height: 3.5rem; }
+    .header__logo-box {
+      position: absolute;
+      top: 4rem;
+      left: 4rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
 
 .card {
   perspective: 1500px;
@@ -382,7 +405,7 @@ body {
     border-radius: 4px;
     position: absolute;
     transition: all 0.2s; }
-    @media (max-width: 56.27em) {
+    @media only screen and (max-width: 56.27em) {
       .composition__photo {
         z-index: 1000;
         width: 39%; } }
@@ -427,7 +450,7 @@ body {
   box-shadow: 0 0.5rem 0.3rem rgba(228, 228, 228, 0.2);
   padding: 6rem;
   transform: skewX(-15deg); }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .story {
       transform: skewX(-5deg);
       width: 90%; } }
@@ -519,7 +542,7 @@ body {
   width: 49%;
   display: inline-block;
   padding-left: 1rem; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .form__radio-group {
       width: 100%;
       padding-bottom: 1rem; } }
@@ -631,41 +654,18 @@ body {
     column-count: 2;
     column-gap: 1em; }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/img/hero.jpg");
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  background-size: cover;
-  background-position: top;
-  position: relative; }
-  @media (max-width: 75em) {
-    .header {
-      clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%); } }
-  .header__logo {
-    height: 3.5rem; }
-    .header__logo-box {
-      position: absolute;
-      top: 4rem;
-      left: 4rem; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%); }
-
 .row {
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin: 0 auto 8rem auto; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .row {
       margin-bottom: 2rem; } }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .row {
       max-width: 50rem; } }
-  @media (max-width: 25em) {
+  @media only screen and (max-width: 25em) {
     .row {
       max-width: 40rem; } }
   .row::after {
@@ -676,10 +676,10 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.27em) {
+      @media only screen and (max-width: 56.27em) {
         .row [class^="col-"]:not(:last-child) {
           margin: 3rem 0; } }
-    @media (max-width: 56.27em) {
+    @media only screen and (max-width: 56.27em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -699,10 +699,10 @@ body {
 .navigation__icon {
   position: relative;
   margin-top: 2.3rem; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .navigation__icon {
       margin-top: 2.5rem; } }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .navigation__icon {
       margin-top: 2rem; } }
   .navigation__icon, .navigation__icon::after, .navigation__icon::before {
@@ -711,7 +711,7 @@ body {
     width: 3.5rem;
     background-color: #595959;
     border-radius: 3px; }
-    @media (max-width: 56.27em) {
+    @media only screen and (max-width: 56.27em) {
       .navigation__icon, .navigation__icon::after, .navigation__icon::before {
         height: 2px;
         width: 2.5rem; } }
@@ -737,7 +737,7 @@ body {
   background-color: #fafafa;
   box-shadow: 3px 3px 10px #595959;
   text-align: center; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .navigation__btn {
       height: 4.5rem;
       width: 4.5rem;
@@ -754,13 +754,13 @@ body {
   background: radial-gradient(circle, rgba(126, 213, 111, 0.95), rgba(40, 180, 133, 0.95));
   z-index: 100;
   transition: all 0.3s; }
-  @media (max-width: 25em) {
+  @media only screen and (max-width: 25em) {
     .navigation__background {
       height: 3rem;
       width: 3rem;
       top: 4.5rem;
       right: 4.5rem; } }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .navigation__background {
       top: 4rem;
       right: 4rem; } }
@@ -797,7 +797,7 @@ body {
   text-decoration: none;
   font-size: 4.5rem;
   text-transform: uppercase; }
-  @media (max-width: 56.27em) {
+  @media only screen and (max-width: 56.27em) {
     .navigation__link {
       font-size: 2.5rem; } }
 
