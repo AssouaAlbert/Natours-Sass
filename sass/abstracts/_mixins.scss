@@ -1,0 +1,58 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+}
+
+// Media Query Manager
+/**
+** 0px to 600px Phone
+** 601px to 900px Tablets Potrait
+** 901px to 12000px Tablet Landscape
+** 901px to 12000px Tablet Landscape
+** 1201px to 1800 Laptops
+** 1800+ Laptops
+*/
+
+// @mixin response-phone {
+//     @media  (max-width: 600px) {
+//         @content;
+//     }    
+// }
+
+// Break points
+// phone
+// tab-port
+// tab-land
+// big-desktop
+
+@mixin respond ($break) {
+    @if $break == tab-land {
+        @media only screen and (max-width: 75em) {
+         @content;
+        }
+     }
+    @if $break == phone {
+       @media only screen and (max-width: 37.5em) {
+        @content;
+       }
+    }
+    @if $break == phone-small {
+        @media only screen and (max-width: 25em) {
+         @content;
+        }
+     }
+    @if $break == tab-port {
+       @media only screen and (max-width: 56.27em) {
+        @content;
+       }
+    }
+    @if $break == big-desktop {
+       @media only screen and (min-width: 112.5em) {
+        @content;
+       }
+    }
+}

@@ -1,0 +1,50 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgba(#aaa, 0.4);
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 0.3rem $color-grey-4;
+  padding: 6rem;
+  transform: skewX(-15deg);
+  @include respond(tab-port) {
+    transform: skewX(-5deg);
+    width: 90%;
+  }
+  & > * {
+    transform: skewX(5deg);
+  }
+  &__picture {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+  }
+  &__image {
+    height: 100%;
+  }
+  &__name {
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  &:hover &__name {
+    top: 50%;
+    opacity: 1;
+  }
+  &:hover &__image {
+    filter: blur(0.8rem);
+  }
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

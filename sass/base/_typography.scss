@@ -1,0 +1,76 @@
+body {
+  font: "Nunito";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-grey-1;
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 6rem;
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: lighter;
+    letter-spacing: 3.5rem;
+    animation-name: moveinLeft;
+    animation-duration: 2s;
+    @include respond(phone) {
+      font-size: 4rem;
+      letter-spacing: 3rem;
+    }
+    @include respond(phone-small) {
+      font-size: 3rem;
+      letter-spacing: 2rem;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 40rem;
+    letter-spacing: 1rem;
+    animation: moveinRight 2s ease-out;
+    @include respond(phone-small) {
+      font-size: 1rem;
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  -webkit-background-clip: text;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  color: transparent;
+  @include respond(phone-small) {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  &:hover {
+    transform: skew(15deg) scale(1.2);
+  }
+}
+
+.heading-tetiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
