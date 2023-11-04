@@ -134,3 +134,6 @@ dist
 css/
 css/*
 css
+
+# Exclude lint config files
+.hintrc
