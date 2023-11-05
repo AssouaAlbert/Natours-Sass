@@ -728,7 +728,6 @@ body {
     top: 1.1rem; }
 
 .navigation__btn {
-  position: relative;
   height: 5rem;
   width: 5rem;
   position: fixed;
@@ -811,10 +810,10 @@ body {
   transform: scale(90); }
 
 .navigation__checkbox:not(:checked) + .navigation__btn:hover .navigation__icon::after {
-  top: -1.4rem; }
+  top: -1.2rem; }
 
 .navigation__checkbox:not(:checked) + .navigation__btn:hover .navigation__icon::before {
-  top: 1.4rem; }
+  top: 1.2rem; }
 
 .navigation__checkbox:checked + .navigation__btn .navigation__icon {
   visibility: hidden; }

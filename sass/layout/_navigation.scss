@@ -40,7 +40,7 @@
     }
   }
   &__btn {
-    position: relative;
+    // position: relative;
     height: 5rem;
     width: 5rem;
     position: fixed;
@@ -131,10 +131,10 @@
   }
 
   &__checkbox:not(:checked) + &__btn:hover &__icon::after {
-    top: -1.4rem;
+    top: -1.2rem;
   }
   &__checkbox:not(:checked) + &__btn:hover &__icon::before {
-    top: 1.4rem;
+    top: 1.2rem;
   }
   &__checkbox:checked + &__btn &__icon {
     visibility: hidden;
