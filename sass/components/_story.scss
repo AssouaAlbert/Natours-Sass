@@ -23,7 +23,9 @@
     position: relative;
   }
   &__image {
+    position: relative;
     height: 100%;
+    transform: translateX(-2rem);
   }
   &__name {
     color: white;

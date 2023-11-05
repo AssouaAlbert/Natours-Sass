@@ -132,7 +132,7 @@ dist
 
 #  Exclude css build folder
 css/
-css/*
+css/*.css
 css
 
 # Exclude lint config files
