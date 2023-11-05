@@ -432,7 +432,7 @@ body {
       transform: skewX(-5deg);
       width: 90%; } }
   .story > * {
-    transform: skewX(5deg); }
+    transform: skewX(15deg); }
   .story__picture {
     width: 15rem;
     height: 15rem;
